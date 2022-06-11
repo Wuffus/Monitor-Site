@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Monitor.master.cs" Inherits="Resources_Monitor" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="CSS/Main.css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="topnav">
+        <a href="Main.aspx">Home</a>
+        <a href="User.aspx">User settings</a>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <footer>
+            <p>Logged on as: <%=Session["userName"] %>, PN: <%=Session["userID"] %>.</p>
+        </footer>
+    </div>
+    </form>
+</body>
+</html>
